@@ -376,6 +376,11 @@ public class CustomBlockData implements PersistentDataContainer {
     public <T, Z> boolean has(final @NotNull NamespacedKey namespacedKey, final @NotNull PersistentDataType<T, Z> persistentDataType) {
         return pdc.has(namespacedKey, persistentDataType);
     }
+    
+    @Override
+    public (T,Z) boolean has(final @NotNull NamespacedKey namespacedKey) {
+        return pdc.has(namespacedKey);
+    }
 
     @Nullable
     @Override
